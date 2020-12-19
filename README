@@ -1,3 +1,5 @@
 # Bunny Linux 
 
 PKGBUILD for packaging. Base on the Zen kernel, PKGBUILD based on Arch.
+
+The config is made for a specific Asus laptop, do not try.
