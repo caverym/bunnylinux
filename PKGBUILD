@@ -2,7 +2,7 @@
 
 pkgbase=linux-bunny
 pkgver=5.10.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux Bunny'
 _srctag=v${pkgver%.*}-${pkgver##*.}
 url="https://github.com/zen-kernel"
@@ -22,7 +22,7 @@ source=(
 )
 
 sha256sums=('26674548f485a044dfc3b64a673a988000eb1cd3f5dfe1a01005aaff1165a4fd'
-            '149a06eafd44e2a69072c092aa54909c328aff3170db77e7e6f87ae8169e29e9'
+            '83532c0b6caf308084f935265f0eaf7ab8a4c19ca18094ae669f761de80d4c70'
             '58cb0364ff641a29b512020b97a7c7b93e51593f31c69809f0ee65024e7dd607')
 
 export KBUILD_BUILD_HOST=archlinux
