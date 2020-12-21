@@ -10,11 +10,9 @@ arch=(x86_64)
 license=(GPL2)
 makedepends=(
   bc kmod libelf pahole cpio perl tar xz
-  xmlto python-sphinx python-sphinx_rtd_theme graphviz imagemagick
-  git
 )
 options=('!strip')
-_srcname=zen-kernel-5.10.1-zen1
+_srcname=zen-kernel-5.10.2-zen1
 source=(
   "https://github.com/zen-kernel/zen-kernel/archive/v${pkgver}-zen1.tar.gz"
   config
