@@ -1,7 +1,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgbase=linux-bunny
-pkgver=5.10.2
+pkgver=5.10.6
 pkgrel=1
 pkgdesc='Linux Bunny'
 _srctag=v${pkgver%.*}-${pkgver##*.}
@@ -12,16 +12,16 @@ makedepends=(
   bc kmod libelf pahole cpio perl tar xz
 )
 options=('!strip')
-_srcname=zen-kernel-5.10.2-zen1
+_srcname=zen-kernel-${pkgver}-zen1
 source=(
   "https://github.com/zen-kernel/zen-kernel/archive/v${pkgver}-zen1.tar.gz"
-  config
+  bunny3.config
   Makefile
 )
 
-sha256sums=('1f2ecb8fb91b314cfa27a26fdfc2dac3822fa705e86a4a57881a5df5497367df'
-            '83532c0b6caf308084f935265f0eaf7ab8a4c19ca18094ae669f761de80d4c70'
-            '58cb0364ff641a29b512020b97a7c7b93e51593f31c69809f0ee65024e7dd607')
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -45,8 +45,10 @@ prepare() {
   done
 
   echo "Setting config..."
-  cp ../config .config
+  cp ../bunny3.config .config
   make olddefconfig
+  #make localmodconfig
+  make menuconfig
 
   echo "Setting Makefile..."
   cp ../Makefile Makefile
@@ -57,7 +59,7 @@ prepare() {
 
 build() {
   cd $_srcname
-  make -j3
+  make
 }
 
 _package() {

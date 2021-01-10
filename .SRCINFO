@@ -1,6 +1,6 @@
 pkgbase = linux-bunny
 	pkgdesc = Linux Bunny
-	pkgver = 5.10.2
+	pkgver = 5.10.6
 	pkgrel = 1
 	url = https://github.com/zen-kernel
 	arch = x86_64
@@ -14,12 +14,12 @@ pkgbase = linux-bunny
 	makedepends = tar
 	makedepends = xz
 	options = !strip
-	source = https://github.com/zen-kernel/zen-kernel/archive/v5.10.2-zen1.tar.gz
-	source = config
+	source = https://github.com/zen-kernel/zen-kernel/archive/v5.10.6-zen1.tar.gz
+	source = bunny3.config
 	source = Makefile
-	sha256sums = 1f2ecb8fb91b314cfa27a26fdfc2dac3822fa705e86a4a57881a5df5497367df
-	sha256sums = 83532c0b6caf308084f935265f0eaf7ab8a4c19ca18094ae669f761de80d4c70
-	sha256sums = 58cb0364ff641a29b512020b97a7c7b93e51593f31c69809f0ee65024e7dd607
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
 
 pkgname = linux-bunny
 	pkgdesc = The Linux Bunny kernel and modules
