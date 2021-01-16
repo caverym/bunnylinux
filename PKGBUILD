@@ -1,7 +1,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgbase=linux-bunny
-pkgver=5.10.6
+pkgver=5.10.7
 pkgrel=1
 pkgdesc='Linux Bunny'
 _srctag=v${pkgver%.*}-${pkgver##*.}
@@ -15,7 +15,7 @@ options=('!strip')
 _srcname=zen-kernel-${pkgver}-zen1
 source=(
   "https://github.com/zen-kernel/zen-kernel/archive/v${pkgver}-zen1.tar.gz"
-  bunny3.config
+  config
   Makefile
 )
 
@@ -45,7 +45,7 @@ prepare() {
   done
 
   echo "Setting config..."
-  cp ../bunny3.config .config
+  cp ../config .config
   make olddefconfig
   #make localmodconfig
   make menuconfig
