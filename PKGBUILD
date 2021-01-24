@@ -1,8 +1,8 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgbase=linux-bunny
-pkgver=5.10.7
-pkgrel=1
+pkgver=5.10.10
+pkgrel=2
 pkgdesc='Linux Bunny'
 _srctag=v${pkgver%.*}-${pkgver##*.}
 url="https://github.com/zen-kernel"
@@ -47,7 +47,7 @@ prepare() {
   echo "Setting config..."
   cp ../config .config
   make olddefconfig
-  #make localmodconfig
+  # make localmodconfig
   make menuconfig
 
   echo "Setting Makefile..."
@@ -59,7 +59,7 @@ prepare() {
 
 build() {
   cd $_srcname
-  make
+  nice make -j`nproc`
 }
 
 _package() {
